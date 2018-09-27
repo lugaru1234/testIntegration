@@ -24,7 +24,7 @@ object DevelopersApi {
    * @param limit maximum number of records to return
    */
   def searchInventory(searchString: Option[String] = None, skip: Option[Int] = None, limit: Option[Int] = None): ApiRequest[Seq[InventoryItem]] =
-    ApiRequest[Seq[InventoryItem]](ApiMethods.GET, "http://192.168.1.11/virts/admin/simple/1.0.0", "/inventory", "application/json")
+    ApiRequest[Seq[InventoryItem]](ApiMethods.GET, "http://10.0.1.148/virts/admin/simple/1.0.0", "/inventory", "application/json")
       .withQueryParam("searchString", searchString)
       .withQueryParam("skip", skip)
       .withQueryParam("limit", limit)

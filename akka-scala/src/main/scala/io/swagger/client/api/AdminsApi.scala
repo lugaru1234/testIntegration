@@ -23,7 +23,7 @@ object AdminsApi {
    * @param inventoryItem Inventory item to add
    */
   def addInventory(inventoryItem: Option[InventoryItem] = None): ApiRequest[Unit] =
-    ApiRequest[Unit](ApiMethods.POST, "http://192.168.1.11/virts/admin/simple/1.0.0", "/inventory", "application/json")
+    ApiRequest[Unit](ApiMethods.POST, "http://10.0.1.148/virts/admin/simple/1.0.0", "/inventory", "application/json")
       .withBody(inventoryItem)
       .withSuccessResponse[Unit](201)
       .withErrorResponse[Unit](400)
